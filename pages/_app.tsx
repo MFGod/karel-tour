@@ -1,6 +1,23 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import { ThemeProvider } from 'styled-components';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import { GlobalStyles } from '../libs/ui-kit/src/lib/styles/global-styles';
+import { theme } from '../libs/ui-kit/src/lib/styles/theme';
+
+function CustomApp({ Component, pageProps }: AppProps) {
+  return (
+    <>
+      <Head>
+        <title>Karel-tour</title>
+      </Head>
+
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
+  );
 }
+
+export default CustomApp;
