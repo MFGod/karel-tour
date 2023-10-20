@@ -11,7 +11,7 @@ const Wrapper = styled.section`
 
   height: 100vh;
   width: 100%;
-  background-image: url('/images/home.jpg');
+  background: ${(props) => props.theme.backgorundImage};
   background-size: cover;
   background-position: center;
 `;

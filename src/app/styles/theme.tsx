@@ -6,6 +6,8 @@ export const lightTheme = {
   text: '#ffffff',
 
   primary: '#3483eb',
+
+  backgorundImage: 'purple',
 };
 
 export const darkTheme = {
@@ -16,4 +18,6 @@ export const darkTheme = {
   text: '#000000',
 
   primary: '#3483eb',
+
+  backgorundImage: 'red',
 };
