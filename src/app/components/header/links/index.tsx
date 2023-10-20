@@ -1,13 +1,13 @@
-import Link from "next/link";
-import styled from "styled-components";
+import Link from 'next/link';
+import styled from 'styled-components';
 
-import { names, routeHref } from "@/routes";
+import { StyledIHome } from '../../../../../public/images/icons/home';
+import { StyledICatalog } from '../../../../../public/images/icons/catalog';
+import { StyledIAbout } from '../../../../../public/images/icons/about';
+import { StyledIGallery } from '../../../../../public/images/icons/gallery';
+import { StyledIContacts } from '../../../../../public/images/icons/contacts';
 
-import { StyledHome } from "../../../../../public/images/icons/home/index";
-import { StyledCatalog } from "../../../../../public/images/icons/catalog/index";
-import { StyledAbout } from "../../../../../public/images/icons/about/index";
-import { StyledGallery } from "../../../../../public/images/icons/gallery/index";
-
+import { names, routeHref } from '@/routes';
 
 const List = styled.ul`
   display: flex;
@@ -15,16 +15,16 @@ const List = styled.ul`
   align-items: start;
   flex-wrap: nowrap;
   column-gap: 24px;
-  padding: 0px;
   list-style: none;
 `;
 
 const Anchor = styled.a`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: 10px;
 
+  min-width: 224px;
   padding: 10px;
 
   font-size: 36px;
@@ -42,19 +42,19 @@ const Anchor = styled.a`
   }
 `;
 
-
-
 export const Links = () => {
   const getIcon = (name: string) => {
     switch (name) {
-      case "home":
-        return <StyledHome />;
-      case "catalog":
-        return <StyledCatalog />;
-      case "about":
-        return <StyledAbout />;
-      case "gallery":
-        return <StyledGallery />;
+      case 'home':
+        return <StyledIHome />;
+      case 'catalog':
+        return <StyledICatalog />;
+      case 'about':
+        return <StyledIAbout />;
+      case 'gallery':
+        return <StyledIGallery />;
+      case 'contacts':
+        return <StyledIContacts />;
       default:
         return null;
     }

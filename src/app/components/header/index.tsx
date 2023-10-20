@@ -4,12 +4,14 @@ import styled from 'styled-components';
 import { NavigationContext } from '@/app/context/context';
 
 import { Links } from './links';
-import { Theme } from './theme';
+import { Theme } from './settings/theme';
 
 import { OpenMenu } from '../../../../public/images/icons/menu/open';
 import { CloseMenu } from '../../../../public/images/icons/menu/close';
 import { Logo } from '../../../../public/images/icons/logo';
 import { Contacts } from './contacts';
+import { LanguageDropdown } from './settings/language-dropdown';
+import { Settings } from './settings';
 
 interface IMenuProps {
   open: boolean;
@@ -53,7 +55,7 @@ export const StyledMenu = styled.div<IMenuProps>`
   border-radius: 6px;
   padding: 6px;
 
-  background-color: #c9c9c992;
+  background-color: #ffffff92;
 
   transition: right 0.6s ease-in-out;
 `;
@@ -73,7 +75,7 @@ export const Header = () => {
 
       <Contacts />
 
-      <Theme />
+      <Settings />
     </Wrapper>
   );
 };

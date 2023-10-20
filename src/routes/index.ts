@@ -3,6 +3,7 @@ export enum Route {
   catalog = 'catalog',
   about = 'about',
   gallery = 'gallery',
+  contacts = 'contacts',
   names = 'names',
 }
 
@@ -10,7 +11,8 @@ export const routeHref = {
   [Route.home]: '/',
   [Route.catalog]: '/pages/catalog',
   [Route.about]: '/pages/about',
-  [Route.gallery]: '/pages/gallery'
+  [Route.gallery]: '/pages/gallery',
+  [Route.contacts]: '/pages/contacts',
 };
 
 export const names = {
@@ -18,6 +20,7 @@ export const names = {
   [Route.catalog]: 'Каталог',
   [Route.about]: 'О нас',
   [Route.gallery]: 'Галерея',
+  [Route.contacts]: 'Контакты',
 };
 
 //export const routeImages: { [key: string]: string } = {

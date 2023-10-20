@@ -1,20 +1,23 @@
-import { ComponentProps, FC } from "react";
-import styled from "styled-components";
+import { ComponentProps, FC } from 'react';
+import styled from 'styled-components';
 
-interface ICatalogProps extends ComponentProps<"svg"> {}
+interface ICatalogProps extends ComponentProps<'svg'> {}
 
-export const Catalog: FC<ICatalogProps> = (props) => {
+export const ICatalog: FC<ICatalogProps> = (props) => {
   return (
     <svg
       version="1.1"
-      id="Uploaded to svgrepo.com"
       width="800px"
       height="800px"
       viewBox="0 0 32 32"
+      stroke="#ffffff"
+      strokeWidth="0.5"
       fill="#ffffff"
+      
       {...props}
     >
       <path
+      
         d="M20,10.5c0,0.276-0.224,0.5-0.5,0.5h-3c-0.276,0-0.5-0.224-0.5-0.5s0.224-0.5,0.5-0.5h3
    C19.776,10,20,10.224,20,10.5z M12.5,11h-2c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5h2c0.276,0,0.5-0.224,0.5-0.5
    S12.776,11,12.5,11z M12.5,13h-2c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5h2c0.276,0,0.5-0.224,0.5-0.5S12.776,13,12.5,13z
@@ -42,7 +45,7 @@ export const Catalog: FC<ICatalogProps> = (props) => {
   );
 };
 
-export const StyledCatalog = styled(Catalog)`
+export const StyledICatalog = styled(ICatalog)`
   width: 36px;
   height: 36px;
 `;

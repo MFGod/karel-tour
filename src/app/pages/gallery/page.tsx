@@ -4,13 +4,14 @@ import styled from 'styled-components';
 
 const Wrapper = styled.section`
   width: 100%;
-
 `;
-const Catalog = () => {
+
+const Gallery = () => {
   return (
     <Wrapper>
-      <h1>Catalog</h1>
+      <h1>Gallery</h1>
     </Wrapper>
   );
 };
-export default Catalog;
+
+export default Gallery;

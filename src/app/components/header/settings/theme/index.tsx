@@ -6,13 +6,17 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  flex-direction: row;
+  gap:10px;
 
-  font-size: 36px;
+  padding:10px;
 `;
 
-export const StyledText = styled.span`
-  display: block;
+export const Text = styled.span`
+   display: flex;
+
+  font-size: 26px;
 
   color: ${(props) => props.theme.text};
 `;
@@ -21,7 +25,6 @@ export const StyledButton = styled.button<ThemeInterface>`
   position: relative;
 
   display: flex;
-  margin: 0 auto;
   cursor: pointer;
   width: 56px;
   height: 30px;
@@ -53,7 +56,7 @@ export const Theme = () => {
 
   return (
     <Wrapper>
-      <StyledText>Theme</StyledText>
+      <Text>Theme:</Text>
       <StyledButton $themeMode={themeMode} onClick={changeTheme}>
         <Circle $themeMode={themeMode} />
       </StyledButton>

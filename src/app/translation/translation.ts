@@ -1,25 +1,28 @@
-export enum Language {
+export enum Languages {
   RU = 'Russian',
-  ENG = 'English',
-}
-interface translationInterface {
-
+  EN = 'English',
 }
 
-const RU: translationInterface = {
+interface TranslationInterface {
+  language: string;
+}
 
+const RU: TranslationInterface = {
+  language: 'Язык',
 };
-const EN: translationInterface = {
-
+const EN: TranslationInterface = {
+  language: 'Language',
 };
 
 export const translation = (
   language: string,
-  key: keyof translationInterface
+  key: keyof TranslationInterface
 ) => {
   switch (language) {
-    case Language.RU:
+    case Languages.RU:
       return RU[key];
+    case Languages.EN:
+      return EN[key];
     default:
       return EN[key];
   }

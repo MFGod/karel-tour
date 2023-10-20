@@ -7,7 +7,7 @@ export const lightTheme = {
 
   primary: '#3483eb',
 
-  backgorundImage: 'purple',
+  backgorundImage: 'url(/images/home.jpg)',
 };
 
 export const darkTheme = {
@@ -19,5 +19,5 @@ export const darkTheme = {
 
   primary: '#3483eb',
 
-  backgorundImage: 'red',
+  backgorundImage: 'url(/images/karelia.jpg)',
 };

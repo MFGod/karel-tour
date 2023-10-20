@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 interface IHomeProps extends ComponentProps<'svg'> {}
 
-export const Home: FC<IHomeProps> = (props) => {
+export const IHome: FC<IHomeProps> = (props) => {
   return (
     <svg
       fill="#ffffff"
@@ -11,7 +11,7 @@ export const Home: FC<IHomeProps> = (props) => {
       height="64px"
       viewBox="0 0 32 32"
       stroke="#ffffff"
-      strokeWidth="0.00032"
+      strokeWidth="0.1"
       {...props}
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0" />
@@ -29,7 +29,7 @@ export const Home: FC<IHomeProps> = (props) => {
   );
 };
 
-export const StyledHome = styled(Home)`
+export const StyledIHome = styled(IHome)`
   width: 36px;
   height: 36px;
 `;
