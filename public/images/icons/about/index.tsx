@@ -1,4 +1,5 @@
 import { ComponentProps, FC } from 'react';
+import styled from "styled-components";
 
 interface IAboutProps extends ComponentProps<'svg'> {}
 
@@ -25,3 +26,8 @@ export const About: FC<IAboutProps> = (props) => {
     </svg>
   );
 };
+
+export const StyledAbout = styled(About)`
+  width: 36px;
+  height: 36px;
+`;

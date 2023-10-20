@@ -1,10 +1,13 @@
-import Link from 'next/link';
-import styled from 'styled-components';
+import Link from "next/link";
+import styled from "styled-components";
 
-import { names, routeHref } from '@/routes';
+import { names, routeHref } from "@/routes";
 
-import { About } from '../../../../../public/images/icons/about';
-import { Home } from '../../../../../public/images/icons/home';
+import { StyledHome } from "../../../../../public/images/icons/home/index";
+import { StyledCatalog } from "../../../../../public/images/icons/catalog/index";
+import { StyledAbout } from "../../../../../public/images/icons/about/index";
+import { StyledGallery } from "../../../../../public/images/icons/gallery/index";
+
 
 const List = styled.ul`
   display: flex;
@@ -39,23 +42,19 @@ const Anchor = styled.a`
   }
 `;
 
-const StyledHome = styled(Home)`
-  width: 36px;
-  height: 36px;
-`;
 
-const StyledAbout = styled(About)`
-  width: 36px;
-  height: 36px;
-`;
+
 export const Links = () => {
   const getIcon = (name: string) => {
     switch (name) {
-      case 'home':
+      case "home":
         return <StyledHome />;
-      case 'about':
+      case "catalog":
+        return <StyledCatalog />;
+      case "about":
         return <StyledAbout />;
-
+      case "gallery":
+        return <StyledGallery />;
       default:
         return null;
     }

@@ -1,4 +1,5 @@
 import { ComponentProps, FC } from 'react';
+import styled from "styled-components";
 
 interface IHomeProps extends ComponentProps<'svg'> {}
 
@@ -27,3 +28,8 @@ export const Home: FC<IHomeProps> = (props) => {
     </svg>
   );
 };
+
+export const StyledHome = styled(Home)`
+  width: 36px;
+  height: 36px;
+`;
