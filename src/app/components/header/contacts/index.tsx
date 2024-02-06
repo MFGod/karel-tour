@@ -12,8 +12,9 @@ const Wrapper = styled.div`
 `;
 
 const Anchor = styled.a`
-  padding: 4px 4px 4px 4px;
   display: flex;
+  
+  padding: 4px 4px 4px 4px;
 `;
 
 const StyledVk = styled(Vk)`

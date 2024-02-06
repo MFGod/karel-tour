@@ -8,13 +8,13 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  gap:10px;
+  gap: 10px;
 
-  padding:10px;
+  padding: 10px;
 `;
 
 export const Text = styled.span`
-   display: flex;
+  display: flex;
 
   font-size: 26px;
 
@@ -47,8 +47,6 @@ export const Circle = styled.div<ThemeInterface>`
   border-radius: 50%;
 
   background: ${({ theme }) => theme.bg};
-
-  transition: 0.2s ease right;
 `;
 
 export const Theme = () => {

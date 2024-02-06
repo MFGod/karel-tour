@@ -3,15 +3,30 @@ export enum Languages {
   EN = 'English',
 }
 
-interface TranslationInterface {
+export interface TranslationInterface {
   language: string;
+  home: string;
+  about: string;
+  catalog: string;
+  gallery: string;
+  contacts: string;
 }
 
 const RU: TranslationInterface = {
   language: 'Язык',
+  home: 'Главная',
+  about: 'О нас',
+  catalog: 'Каталог',
+  gallery: 'Галерея',
+  contacts: 'Контакты',
 };
 const EN: TranslationInterface = {
   language: 'Language',
+  home: 'Home',
+  about: 'About',
+  catalog: 'Catalog',
+  gallery: 'Gallery',
+  contacts: 'Contacts',
 };
 
 export const translation = (

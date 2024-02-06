@@ -1,12 +1,15 @@
 import { ComponentProps, FC } from 'react';
+import styled from 'styled-components';
 
-interface IOpenMenuProps extends ComponentProps<'svg'> {}
+interface IOpenMenuProps extends ComponentProps<'svg'> {
+  open: boolean;
+}
 
 export const OpenMenu: FC<IOpenMenuProps> = (props) => {
   return (
     <svg
-      width="46px"
-      height="46px"
+      width="36px"
+      height="36px"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -28,4 +31,7 @@ export const OpenMenu: FC<IOpenMenuProps> = (props) => {
   );
 };
 
-
+export const StyledOpenMenu = styled(OpenMenu)`
+  position: absolute;
+  display: flex;
+`;

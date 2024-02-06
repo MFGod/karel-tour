@@ -4,13 +4,16 @@ import styled from 'styled-components';
 import { NavigationContext } from '@/app/context/context';
 
 import { Links } from './links';
-import { Theme } from './settings/theme';
-
-import { OpenMenu } from '../../../../public/images/icons/menu/open';
-import { CloseMenu } from '../../../../public/images/icons/menu/close';
+import {
+  OpenMenu,
+  StyledOpenMenu,
+} from '../../../../public/images/icons/menu/open';
+import {
+  CloseMenu,
+  StyledCloseMenu,
+} from '../../../../public/images/icons/menu/close';
 import { Logo } from '../../../../public/images/icons/logo';
 import { Contacts } from './contacts';
-import { LanguageDropdown } from './settings/language-dropdown';
 import { Settings } from './settings';
 
 interface IMenuProps {
@@ -23,32 +26,29 @@ const StyledLogo = styled(Logo)`
 `;
 
 export const Wrapper = styled.header<IMenuProps>`
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  position: absolute;
+  top: 65px;
+  left: 85px;
+  right: 85px;
 
-  height: 100vh;
-  width: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
   padding: 16px;
 
-  background-color: #9a9a9a6e;
+  background: #09271938;
+  backdrop-filter: blur(10px);
+  border-radius: 60px;
 
   transition: transform 0.3s ease-in-out;
-
-  transform: ${(props) => (props.open ? 'translateX(0)' : 'translateX(-100%)')};
 `;
 
 export const StyledMenu = styled.div<IMenuProps>`
   position: absolute;
   top: 2%;
-  right: ${(props) => (props.open ? '0%' : '-18%')};
+  right: 2%;
 
-  width: 36px;
-  height: 36px;
   display: flex;
   align-items: center;
 
@@ -56,26 +56,24 @@ export const StyledMenu = styled.div<IMenuProps>`
   padding: 6px;
 
   background-color: #ffffff92;
-
-  transition: right 0.6s ease-in-out;
 `;
 
 export const Header = () => {
   const { open, toggleMenu } = useContext(NavigationContext);
 
   return (
-    <Wrapper open={open}>
-      <StyledMenu open={open} onClick={toggleMenu}>
-        {open ? <CloseMenu /> : <OpenMenu />}
-      </StyledMenu>
+    <>
+      {open && (
+        <Wrapper open={open}>
+          <StyledLogo />
 
-      <StyledLogo />
+          <Links />
 
-      <Links />
-
-      <Contacts />
-
-      <Settings />
-    </Wrapper>
+          <Settings />
+          <StyledCloseMenu open={open} onClick={toggleMenu} />
+        </Wrapper>
+      )}
+      {open || <StyledOpenMenu open={open} onClick={toggleMenu} />}
+    </>
   );
 };

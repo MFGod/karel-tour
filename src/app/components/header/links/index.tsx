@@ -8,13 +8,19 @@ import { StyledIGallery } from '../../../../../public/images/icons/gallery';
 import { StyledIContacts } from '../../../../../public/images/icons/contacts';
 
 import { names, routeHref } from '@/routes';
+import {
+  TranslationInterface,
+  translation,
+} from '@/app/translation/translation';
+import { LanguageContext } from '@/app/context/context';
+import { useContext } from 'react';
 
 const List = styled.ul`
   display: flex;
-  flex-direction: column;
-  align-items: start;
+  flex-direction: row;
+  align-items: center;
   flex-wrap: nowrap;
-  column-gap: 24px;
+  gap: 48px;
   list-style: none;
 `;
 
@@ -43,6 +49,7 @@ const Anchor = styled.a`
 `;
 
 export const Links = () => {
+  const { language } = useContext(LanguageContext);
   const getIcon = (name: string) => {
     switch (name) {
       case 'home':
@@ -68,7 +75,7 @@ export const Links = () => {
             <Link href={href} passHref legacyBehavior>
               <Anchor>
                 {getIcon(name)}
-                {names[name]}
+                {translation(language, name as keyof TranslationInterface)}
               </Anchor>
             </Link>
           </li>

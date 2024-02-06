@@ -1,12 +1,15 @@
 import { ComponentProps, FC } from 'react';
+import styled from 'styled-components';
 
-interface ICloseMenuProps extends ComponentProps<'svg'> {}
+interface ICloseMenuProps extends ComponentProps<'svg'> {
+  open: boolean;
+}
 
 export const CloseMenu: FC<ICloseMenuProps> = (props) => {
   return (
     <svg
-      width="46px"
-      height="46px"
+      width="36px"
+      height="36px"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -25,3 +28,7 @@ export const CloseMenu: FC<ICloseMenuProps> = (props) => {
     </svg>
   );
 };
+
+export const StyledCloseMenu = styled(CloseMenu)`
+  padding: 6px;
+`;

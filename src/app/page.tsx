@@ -2,6 +2,7 @@
 
 import { FC } from 'react';
 import styled from 'styled-components';
+import { Header } from './components/header';
 
 const Wrapper = styled.section`
   display: flex;
